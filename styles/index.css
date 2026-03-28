@@ -1,0 +1,194 @@
+body{
+   font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.div-main{
+    margin: 10px 150px 0px 150px;
+    background-color: #eff3f3;
+}
+
+/*Product*/
+.div-product {
+    display: flex;
+    box-shadow: 5px 5px 5px  rgb(154, 154, 154);
+    padding: 35px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+.div-image{
+    padding: 30px;
+    margin-right: 35px;
+    box-shadow: 5px 5px 5px rgb(154, 154, 154);
+    border-radius: 7px 7px 7px 7px;
+
+}
+.div-image img{
+    width: 200px;
+}
+.price{
+    color: rgb(202, 128, 1);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*Average*/
+.div-average .star {
+  font-size: 30px; /* or whatever size you want */
+  vertical-align: auto;
+  margin-right: 2px;
+}
+#average-number {
+  margin-left: 6px;
+  color: #555;
+  font-weight: bold;
+  font-size: 20px;;
+}
+
+/*Title*/
+.title{
+    display: flex;
+    background-color: rgb(202, 128, 1);
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+.title h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/*Any button*/
+button{
+    padding:10px;
+    background-color: #dedfdf;
+    width: 200px;
+    border: none;
+}
+
+/*Review buttons to activate panels for write a review*/
+.btn-comment{    
+    background-color: transparent;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: medium;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btn-comment:hover{
+    background-color: #d1d1d4;
+}
+.btn-comment.activated {
+  background-color: #d1d1d4;
+}
+.div-btn-comment{
+    margin-left: 20px;
+}
+
+/*Customize inputs*/
+.div-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.label{
+    width: 100px;
+}
+input[type=text], input[type=date]{
+    width: 200px;
+    padding: 5px;
+}
+textarea{
+    width: 400px;
+}
+.div-review-rating .span-ratingLevel {
+  color: #818181;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bold;
+}
+.div-review-date{
+  color: #818181;
+  font-style: italic;
+  font-size: 14px;
+}
+
+/*Panels for Review*/
+.tab-panel {
+    display: none;
+    margin: 10px 0px 20px 20px;
+    padding-bottom: 15px;
+}
+.tab-panel.activated {
+  display: block;
+}
+
+/*Submit button*/
+.submit{
+    background-color: transparent;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: medium;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px  #d1d1d4;
+    border-radius: 5px;
+}
+.submit:hover{
+    background-color: #d1d1d4;
+}
+
+/*Display Stare*/
+.star {
+  font-size: 22px;
+}
+.star.full {
+  color: rgb(202, 128, 1);
+}
+.star.empty {
+  color: #ccc;
+}
+.star.half {
+  background: linear-gradient(90deg, rgb(202, 128, 1) 50%, #ccc 50%);
+  background-clip: text; 
+  -webkit-background-clip: text;
+   color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/*Star input (hover, animation)*/
+.rating-input {
+  display: flex;
+  gap: 5px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.rating-input span {
+  color: #ccc;
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-size: 35px;
+  border-color: red solid 1px;
+}
+.rating-input span:hover {
+  transform: scale(1.2);
+}
+.rating-input span.active {
+  color: rgb(202, 128, 1);
+}
+
+/*Display error*/
+small {
+  display: block;
+  color: red;
+  font-size: 0.85rem;
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    max-height 0.25s ease;
+}
+small.show {
+  opacity: 1;
+  max-height: 40px;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate a Product</title>
+    <link rel="stylesheet" href="styles/index.css">
+    
+</head>
+<body>
+    <div class="div-main">
+        <div class="title">
+            <h1>Rating a Product</h1>
+        </div>
+        
+        <div class="div-product">           
+            <div class="div-image">
+                <img src="assets/2-Slice-Toaster-With-6-Browning-Settings.jpg">
+            </div>
+            <div>
+                <p class="p-description">
+                    Amazon Basics 2 Slice Toaster, With 6 Browning Settings, Extra Wide Slots For Bagels 
+                    and Special Breads, Removable Easy-to-Clean Crumb Tray, Cancel/Defrost/Bagel Buttons, 
+                    900W, Black & Silver.
+                </p>
+                <p class="price">
+                    Price: $17.99
+                </p>
+
+                <div class="div-average">
+                    <p class="p-average">
+                        Average:
+                        <span id="average-stars"></span>
+                        <span id="average-number">(0)</span>
+                    </p>
+                </div>
+            </div> 
+
+        </div>   
+        <div class="div-review">
+            
+                <button class="btn-comment activated" data-tab="tab1">Comment</button>
+                <button class="btn-comment" data-tab="tab2">Add Comment</button>
+                  
+        
+            <div class="tab-panel activated" id="tab1">
+                <section class="div-review-customers">
+                    <h2>Customer Review</h2>
+                    <div id="reviews-list"></div>
+                </section>
+            </div>
+            
+            <div class="tab-panel" id="tab2">
+                <section>
+                    <h2>Add Review</h2>
+                    <form class="div-form">
+                        <div class="div-field">
+                            <label for="visit-date">Date</label>
+                            <input type="date" name="visit-date" id="visit-date" readonly> 
+                        </div>
+
+                        <div class="div-field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" >                        
+                        </div>
+                        <small id="name-error"></small>
+
+                        <div class="div-field">
+                            <label>Rating</label>
+                            <div class="rating-input" id="rating-input">
+                                <span data-value="1">★</span>
+                                <span data-value="2">★</span>
+                                <span data-value="3">★</span>
+                                <span data-value="4">★</span>
+                                <span data-value="5">★</span>
+                            </div>
+                            <small id="rating-error"></small>
+                        </div>
+
+                        <div class="div-field">
+                            <label for="comment">Comment</label>
+                            <textarea name="comment" id="comment" rows="5" cols="40"></textarea>                        
+                        </div>
+                         <small id="comment-error"></small>                   
+                        <div>
+                            <button class="submit">Submit</button>
+                        </div>                   
+                        
+                    </form>
+                </section>
+            </div>
+
+        </div> 
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
